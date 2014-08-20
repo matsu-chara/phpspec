@@ -11,4 +11,9 @@ class StreamSpec extends ObjectBehavior
     {
         $this->shouldHaveType('Markdown\Stream');
     }
+
+    function it_has_no_next_line()
+    {
+        $this->getNextLine()->shouldReturn("");
+    }
 }

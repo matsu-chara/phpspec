@@ -4,6 +4,7 @@ namespace spec\Markdown\Formatter;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
+use Markdown\Stream;
 
 class EndOfListFormatterSpec extends ObjectBehavior
 {
