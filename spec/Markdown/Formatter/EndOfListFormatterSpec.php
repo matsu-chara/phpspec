@@ -11,4 +11,10 @@ class EndOfListFormatterSpec extends ObjectBehavior
     {
         $this->shouldHaveType('Markdown\Formatter\EndOfListFormatter');
     }
+
+    function it_adds_a_end_of_list_to_markup(Stream $stream)
+    {
+        $stream->getNextLine()->willReturn("");
+        $this->format(" * Hi,there", $stream)->shouldReturn("</li></ul>");
+    }
 }
